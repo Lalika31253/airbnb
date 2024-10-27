@@ -1,10 +1,12 @@
-import Header from "./header";
+import Header from "./Header";
 
-const SearchLayout = ({ children }) =>  {
+const SearchLayout = ({ children }) => {
   return (
     <>
       <Header />
-      {children}
+      <main>
+        {children}
+      </main>
     </>
   )
 
