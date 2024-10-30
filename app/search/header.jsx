@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from "react";
+import SearchBar from "./components/SearchBar";
 
 const Header = () => {
 
@@ -13,6 +14,11 @@ const Header = () => {
   return (
     <header className="container flex justify-between h-10 border-b bg-white z-50 fixed w-full">
       <div className="text-red-500">airbnb</div>
+
+{/* conditional rendering : Show SearchBar if expanded, else show button*/}
+      {isExpanded ? (
+        <SearchBar />
+      ) : (
       <button
         onClick={toggleExpanded}
         className="search-container flex gap-3 rounded-lg">
@@ -31,6 +37,7 @@ const Header = () => {
         </div>
 
       </button>
+      )}
       <div>User</div>
 
     </header>
